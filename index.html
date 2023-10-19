@@ -14,9 +14,13 @@
     />
   </head>
 
-  <body>
-    <audio autoplay loop controls>
-      <source autoplay src="bandoi_cut.mp3" type="audio/mp3" />
+  <script>
+    audioElement.play();
+  </script>
+
+  <body onclick="play()">
+    <audio loop id="autoplay">
+      <source src="bandoi_cut.mp3" type="audio/mp3" />
     </audio>
 
     <div class="greetings">
@@ -120,7 +124,7 @@
         // set up text to print, each item in array is new line
         var aText = new Array(
           "20.10.2023 Ngày Phụ Nữ Việt Nam",
-          "Chúc cho bà, mẹ, chị em phụ nữ ",
+          "Chúc cho bé Thư",
           "Luôn xinh đẹp, mạnh khoẻ và hạnh phúc",
           "Chúc cho những người con gái",
           "Luôn được yêu thương, che chở ",
@@ -174,4 +178,9 @@
       </a>
     </div>
   </body>
+  <script>
+    function play() {
+      document.getElementById("autoplay").play();
+    }
+  </script>
 </html>
